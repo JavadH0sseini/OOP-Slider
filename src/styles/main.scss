@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;800&display=swap");
+$primary-color: #ffffff;
+$secondary-color: #ffffff;
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+
