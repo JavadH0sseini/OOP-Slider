@@ -1,7 +1,7 @@
 [
-  { "title": "a", "src": "./assets/1.jpg" },
-  { "title": "a", "src": "./assets/2.jpg" },
-  { "title": "a", "src": "./assets/3.jpg" },
-  { "title": "a", "src": "./assets/4.jpg" },
-  { "title": "a", "src": "./assets/5.jpg" }
+  { "title": "عکس شماره 1", "src": "./assets/1.jpg" },
+  { "title": "عکس شماره 2", "src": "./assets/2.jpg" },
+  { "title": "عکس شماره 3", "src": "./assets/3.jpg" },
+  { "title": "عکس شماره 4", "src": "./assets/4.jpg" },
+  { "title": "عکس شماره 5", "src": "./assets/5.jpg" }
 ]

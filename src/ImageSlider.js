@@ -12,12 +12,23 @@ export default class ImageSlider {
   render() {
     const slider = document.createElement("div");
     slider.classList.add("slider__container");
+    slider.style.width = `${this.images.length * this.sildeSize}px`;
 
     this.images.forEach((image) => {
+      const imgContainer = document.createElement("div");
+      imgContainer.classList.add("img__container");
+
       const imgEl = document.createElement("img");
       const IMG = (image) => require(`${image.src}`);
       imgEl.src = `${IMG(image)}`;
-      slider.appendChild(imgEl);
+      imgContainer.appendChild(imgEl);
+
+      const titileEl = document.createElement("div");
+      titileEl.classList.add("title");
+      titileEl.textContent = image.title;
+      imgContainer.appendChild(titileEl);
+
+      slider.appendChild(imgContainer);
     });
 
     this.container.appendChild(slider);

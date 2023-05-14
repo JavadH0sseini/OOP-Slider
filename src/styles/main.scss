@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;800&display=swap");
 $primary-color: #40d3dc;
+$primary-color-lowopacity: #dedede3e;
 $secondary-color: #ffffff;
-$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.163), 0 6px 6px rgba(0, 0, 0, 0.1);
+$box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.334);
 
 * {
   margin: 0;
@@ -15,34 +16,61 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: $primary-color;
+  background: linear-gradient(#26aab1, #4be5ed);
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
 .slider {
-  width: 600px;
+  width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-shadow: $box-shadow;
-  border-radius: 20px;
+  border-radius: 10px;
 
+  
   .slider__container {
-    height: 400px;
+    height: 600px;
     transform: translate(0px);
     transition: transform 1.5s ease;
     display: flex;
     flex-direction: row;
+    .img__container {
+      width: 1000px;
+      position: relative;
 
-    img {
-      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .title {
+        width: 100%;
+        font-family: "Vazirmatn", sans-serif;
+        position: absolute;
+        color: #fff;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        text-align: center;
+        padding: 30px 0;
+        background-color: $primary-color-lowopacity;
+        font-weight: 400;
+      }
     }
   }
 }
 .slider__cntrls {
-  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
+  width: 60%;
   button {
     background-color: $primary-color;
     border: none;
@@ -54,12 +82,15 @@ body {
     border-radius: 10px;
     padding: 10px 100px;
     cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
 
-    &:hover{
+    &:hover {
       background-color: $secondary-color;
       color: $primary-color;
-
     }
-
+    &:active {
+      background-color: #eaeaea;
+    }
   }
 }
