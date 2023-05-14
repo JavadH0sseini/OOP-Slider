@@ -4,7 +4,9 @@ export default class ImageSlider {
     this.images = images;
     this.currentIndex = 0;
     this.sildeSize = this.container.offsetWidth;
-    this.setAutoPlay(transitionTime)
+    this.transitionTime = transitionTime;
+    this.sliderInterval;
+    this.setAutoPlay();
   }
 
   render() {
@@ -17,7 +19,6 @@ export default class ImageSlider {
       imgEl.src = `${IMG(image)}`;
       slider.appendChild(imgEl);
     });
-
 
     this.container.appendChild(slider);
   }
@@ -36,16 +37,30 @@ export default class ImageSlider {
       this.currentIndex = 0;
     }
     this.displayImage();
+
+    this.resetAutoPlay();
   }
 
   displayImage() {
     const slider = document.querySelector(".slider__container");
-    slider.style.transform = `translateX(-${
+    slider.style.transform = `translateX(${
       this.currentIndex * this.sildeSize
     }px)`;
+    this.resetAutoPlay();
   }
 
-  setAutoPlay(transitionTime){
-    setInterval(this.showNext.bind(this), transitionTime);
+  setAutoPlay() {
+    this.sliderInterval = setInterval(
+      this.showNext.bind(this),
+      this.transitionTime
+    );
+  }
+
+  resetAutoPlay() {
+    clearInterval(this.sliderInterval);
+    this.sliderInterval = setInterval(
+      this.showNext.bind(this),
+      this.transitionTime
+    );
   }
 }

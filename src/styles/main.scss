@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;800&display=swap");
-$primary-color: #ffffff;
+$primary-color: #40d3dc;
 $secondary-color: #ffffff;
-$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.163), 0 6px 6px rgba(0, 0, 0, 0.1);
 
 * {
   margin: 0;
@@ -10,14 +10,12 @@ $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 body {
-  font-family: "Vazirmatn", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  // overflow: hidden;
-  // margin: 0;
+  background: $primary-color;
 }
 
 .slider {
@@ -26,21 +24,42 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: $box-shadow;
+  border-radius: 20px;
 
   .slider__container {
     height: 400px;
     transform: translate(0px);
-    transition: transform 0.8s ease;
+    transition: transform 1.5s ease;
     display: flex;
     flex-direction: row;
-    
+
     img {
       width: 100%;
-      // width: 600px;
-      // height: 400px;
-      // background: url(../assets/1.jpg);
-      // background-size: cover;
+    }
+  }
+}
+.slider__cntrls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    background-color: $primary-color;
+    border: none;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: $secondary-color;
+    border: solid $secondary-color;
+    border-radius: 10px;
+    padding: 10px 100px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $secondary-color;
+      color: $primary-color;
 
     }
+
   }
 }

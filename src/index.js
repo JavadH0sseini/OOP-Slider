@@ -7,13 +7,13 @@ const sliderContainer = document.querySelector(".slider");
 const sliderCntls = document.querySelector(".slider__cntrls");
 
 
-const slider = new ImageSlider(sliderContainer, data, 2000);
+const slider = new ImageSlider(sliderContainer, data, 5000);
 slider.render();
 
 
-const prev = new Button(sliderCntls, "Prev", slider.showPrevious, slider, 'prev__btn');
+const prev = new Button(sliderCntls, "قبلی", slider.showPrevious, slider, 'prev__btn');
 prev.render();
-const next = new Button(sliderCntls, "Next", slider.showNext, slider, 'next__btn');
+const next = new Button(sliderCntls, "بعدی", slider.showNext, slider, 'next__btn');
 next.render();
 
 
