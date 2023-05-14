@@ -16,8 +16,31 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  // overflow: hidden;
+  // margin: 0;
 }
 
+.slider {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
+  .slider__container {
+    height: 400px;
+    transform: translate(0px);
+    transition: transform 0.8s ease;
+    display: flex;
+    flex-direction: row;
+    
+    img {
+      width: 100%;
+      // width: 600px;
+      // height: 400px;
+      // background: url(../assets/1.jpg);
+      // background-size: cover;
+
+    }
+  }
+}
