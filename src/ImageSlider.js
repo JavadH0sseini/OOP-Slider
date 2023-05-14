@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 export default class ImageSlider {
   constructor(container, images, transitionTime) {
     this.container = container;
@@ -20,17 +18,8 @@ export default class ImageSlider {
       slider.appendChild(imgEl);
     });
 
-    const sliderCntls = document.createElement("div");
-    sliderCntls.classList.add("slider__cntrls");
-
-    const prev = new Button(sliderCntls, "Prev", this.showPrevious, this, 'prev__btn');
-    prev.render();
-
-    const next = new Button(sliderCntls, "Next", this.showNext, this, 'next__btn');
-    next.render();
 
     this.container.appendChild(slider);
-    this.container.appendChild(sliderCntls);
   }
 
   showPrevious() {
