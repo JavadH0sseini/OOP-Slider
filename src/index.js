@@ -1,14 +1,7 @@
 import "./styles/main.scss";
-import Slider from "./slider";
-const sliderContainer = document.querySelector(".slider__container");
+import ImageSlider from "./ImageSlider";
 import data from "./data.json";
+const sliderContainer = document.querySelector(".slider");
 
-data.images.forEach((image) => {
-  const imgEl = document.createElement("img");
-  const IMG = (image) => require(`${image.src}`);
-  imgEl.src = `${IMG(image)}`;
-  sliderContainer.appendChild(imgEl);
-});
-
-new Slider();
-
+const slider = new ImageSlider(sliderContainer, data, 2000);
+slider.render();
